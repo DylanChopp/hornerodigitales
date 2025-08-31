@@ -1,1 +1,157 @@
-<h1> hornero digitales </h1>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio - Venta de Cuentas y Skins</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .collage-grid-vertical {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+
+    .collage-grid-vertical img {
+      width: 100%;
+      aspect-ratio: 3 / 4; /* proporción vertical 3:4 */
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .collage-grid-vertical img:hover {
+      transform: scale(1.05);
+      z-index: 10;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .social-icons a {
+      font-size: 3rem;
+      margin: 0 10px;
+      color: #333;
+      transition: color 0.3s ease;
+      text-decoration: none; /* Eliminar subrayado */
+      border: none; /* Eliminar bordes */
+    }
+
+    .social-icons a:hover {
+      color: #007bff; /* Cambia el color al pasar el ratón */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="WhatsApp Image 2025-08-26 at 2.57.40 PM.jpeg" alt="Logo" style="height: 80px; border-radius: 50%; margin-right: 80px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="streaming.html">📺 Streaming</a></li>
+          <li class="nav-item"><a class="nav-link" href="juegos.html">🕹️ Juegos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BIENVENIDA -->
+  <div class="container text-center mt-5">
+    <h1>Bienvenido a Dylaann chop</h1>
+    <p>Venta de perfiles de streaming y cuentas de video juegos a excelentes precios.</p>
+  </div>
+
+    <!-- OFERTAS -->
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Ofertas del dia</h1>
+    <div id="game-list" class="row row-cols-1 row-cols-md-3 g-4">
+       <!-- Aquí se cargarán las cuentas dinámicamente -->
+    </div>
+  </div> 
+
+  <!-- CLIENTES SATISFECHOS COLLAGE -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">💬 Clientes Satisfechos</h2>
+    <div class="collage-grid-vertical">
+      <img src="ref1.jpeg" alt="Cliente 1" class="item rounded shadow-sm">
+      <img src="ref2.jpeg" alt="Cliente 2" class="item rounded shadow-sm">
+      <img src="ref3.jpeg" alt="Cliente 3" class="item rounded shadow-sm">
+      <img src="ref4.jpeg" alt="Cliente 4" class="item rounded shadow-sm">
+      <img src="ref5.jpeg" alt="Cliente 5" class="item rounded shadow-sm">
+      <img src="ref6.jpeg" alt="Cliente 6" class="item rounded shadow-sm">
+    </div>
+  </div>
+
+  <!-- Métodos de Pago -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">💳 Métodos de Pago</h2>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <i class="fab fa-btc me-2"></i> Binance (Disponibles en todos los países)
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-exchange-alt me-2"></i> Transferencia Bancaria (Argentina y México)
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <!-- Redes Sociales -->
+  <div class="container text-center my-5">
+    <h3>Síguenos en nuestras redes sociales:</h3>
+    <div class="social-icons">
+      <a href="https://www.tiktok.com/@hornero_" target="_blank" class="fab fa-tiktok"></a>
+      <a href="https://www.facebook.com/dylan.cala.710" target="_blank" class="fab fa-facebook"></a>
+      <a href="https://www.instagram.com/hornero_stock" target="_blank" class="fab fa-instagram"></a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center mt-5 mb-3 text-muted">
+    &copy; 2025 Chop - Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+    $(document).ready(function() {
+      // URL de la API de SheetDB
+      const sheetApiUrl = 'https://sheetdb.io/api/v1/l6w1newc5snsa';  // Reemplaza con tu URL de SheetDB
+
+      // Obtener los datos del Excel a través de SheetDB
+      $.get(sheetApiUrl, function(data) {
+        // Iteramos sobre los datos y los agregamos al HTML
+        data.forEach(function(oferta) {
+          let urlbtn = '';
+          urlbtn = `https://wa.me/5491159318371?text=Informaci%C3%B3n%20de%20la%20${oferta.code}`;
+          $('#game-list').append(`
+            <div class="col">
+              <div class="card h-100">
+                <img src="${oferta.image}" class="card-img-top" alt="${oferta.game}">
+                <div class="card-body">
+                  <h5 class="card-title">${oferta.titulo}</h5>
+                  <p class="card-text">${oferta.price}</p>
+                  <a href=${urlbtn} class="btn btn-success w-100">Informes</a>
+                </div>
+              </div>
+            </div>
+          `);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
