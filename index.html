@@ -3,33 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página</title>
+  <title>Mi Tienda</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f9f9f9;
       margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #0056ff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
       padding: 20px;
     }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-
-    .galeria img {
-      width: 100%;
-      height: auto;
+    .producto {
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
     }
 
-    .whatsapp-btn {
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .titulo {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+    }
+
+    .precio {
+      color: #28a745;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .btn {
       display: inline-block;
-      background-color: #25D366;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0056ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #003bb3;
+    }
+
+    .whatsapp {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .whatsapp a {
+      background: #25D366;
       color: white;
       padding: 15px 25px;
       font-size: 18px;
@@ -39,26 +90,61 @@
       transition: background 0.3s;
     }
 
-    .whatsapp-btn:hover {
-      background-color: #1ebe5b;
+    .whatsapp a:hover {
+      background: #1ebe5b;
     }
   </style>
 </head>
 <body>
-  <h1>Mi Galería</h1>
 
-  <div class="galeria">
-    <img src="imagen1.jpg" alt="Imagen 1">
-    <img src="imagen2.jpg" alt="Imagen 2">
-    <img src="imagen3.jpg" alt="Imagen 3">
-    <img src="imagen4.jpg" alt="Imagen 4">
-    <img src="imagen5.jpg" alt="Imagen 5">
+  <header>Mi Tienda Online</header>
+
+  <div class="contenedor">
+    <!-- Producto 1 -->
+    <div class="producto">
+      <img src="imagen1.jpg" alt="Producto 1">
+      <div class="titulo">Producto 1</div>
+      <div class="precio">$500</div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="producto">
+      <img src="imagen2.jpg" alt="Producto 2">
+      <div class="titulo">Producto 2</div>
+      <div class="precio">$250</div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto">
+      <img src="imagen3.jpg" alt="Producto 3">
+      <div class="titulo">Producto 3</div>
+      <div class="precio">$100</div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="producto">
+      <img src="imagen4.jpg" alt="Producto 4">
+      <div class="titulo">Producto 4</div>
+      <div class="precio">$350</div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="producto">
+      <img src="imagen5.jpg" alt="Producto 5">
+      <div class="titulo">Producto 5</div>
+      <div class="precio">$800</div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
   </div>
 
   <!-- Botón de WhatsApp -->
-  <a class="whatsapp-btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
-    💬 Enviar WhatsApp
-  </a>
+  <div class="whatsapp">
+    <a href="https://wa.me/549XXXXXXXXXX" target="_blank">💬 Contactar por WhatsApp</a>
+  </div>
 
 </body>
 </html>
