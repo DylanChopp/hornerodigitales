@@ -1,9 +1,64 @@
-  <!-- Redes Sociales -->
-  <div class="container text-center my-5">
-    <h3>Síguenos en nuestras redes sociales:</h3>
-    <div class="social-icons">
-      <a href="https://www.tiktok.com/@hornero_" target="_blank" class="fab fa-tiktok"></a>
-      <a href="https://www.facebook.com/dylan.cala.710" target="_blank" class="fab fa-facebook"></a>
-      <a href="https://www.instagram.com/hornero_stock" target="_blank" class="fab fa-instagram"></a>
-    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi Galería</h1>
+
+  <div class="galeria">
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3">
+    <img src="imagen4.jpg" alt="Imagen 4">
+    <img src="imagen5.jpg" alt="Imagen 5">
   </div>
+
+  <!-- Botón de WhatsApp -->
+  <a class="whatsapp-btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">
+    💬 Enviar WhatsApp
+  </a>
+
+</body>
+</html>
