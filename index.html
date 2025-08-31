@@ -12,13 +12,43 @@
       background: #f4f4f4;
     }
 
-    header {
+    /* Barra de navegación */
+    nav {
       background: #0056ff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 24px;
+    }
+
+    nav .logo {
+      font-size: 22px;
       font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
     }
 
     .contenedor {
@@ -93,58 +123,98 @@
     .whatsapp a:hover {
       background: #1ebe5b;
     }
+
+    footer {
+      background: #0056ff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
 
-  <header>Mi Tienda Online</header>
+  <!-- Barra de navegación -->
+  <nav>
+    <div class="logo">Mi Tienda</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#ofertas">Ofertas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-  <div class="contenedor">
-    <!-- Producto 1 -->
-    <div class="producto">
-      <img src="imagen1.jpg" alt="Producto 1">
-      <div class="titulo">Producto 1</div>
-      <div class="precio">$500</div>
-      <a href="#" class="btn">Añadir al carrito</a>
+  <!-- Sección Inicio -->
+  <section id="inicio">
+    <h1 style="text-align:center; padding:20px;">Bienvenido a Mi Tienda</h1>
+  </section>
+
+  <!-- Sección Productos -->
+  <section id="productos">
+    <h2 style="text-align:center;">Nuestros Productos</h2>
+    <div class="contenedor">
+      <!-- Producto 1 -->
+      <div class="producto">
+        <img src="imagen1.jpg" alt="Producto 1">
+        <div class="titulo">Producto 1</div>
+        <div class="precio">$500</div>
+        <a href="#" class="btn">Añadir al carrito</a>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto">
+        <img src="imagen2.jpg" alt="Producto 2">
+        <div class="titulo">Producto 2</div>
+        <div class="precio">$250</div>
+        <a href="#" class="btn">Añadir al carrito</a>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto">
+        <img src="imagen3.jpg" alt="Producto 3">
+        <div class="titulo">Producto 3</div>
+        <div class="precio">$100</div>
+        <a href="#" class="btn">Añadir al carrito</a>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto">
+        <img src="imagen4.jpg" alt="Producto 4">
+        <div class="titulo">Producto 4</div>
+        <div class="precio">$350</div>
+        <a href="#" class="btn">Añadir al carrito</a>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto">
+        <img src="imagen5.jpg" alt="Producto 5">
+        <div class="titulo">Producto 5</div>
+        <div class="precio">$800</div>
+        <a href="#" class="btn">Añadir al carrito</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Producto 2 -->
-    <div class="producto">
-      <img src="imagen2.jpg" alt="Producto 2">
-      <div class="titulo">Producto 2</div>
-      <div class="precio">$250</div>
-      <a href="#" class="btn">Añadir al carrito</a>
+  <!-- Sección Ofertas -->
+  <section id="ofertas">
+    <h2 style="text-align:center; margin-top:30px;">Ofertas Especiales</h2>
+    <p style="text-align:center;">¡Pronto añadiremos descuentos exclusivos!</p>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto">
+    <h2 style="text-align:center; margin-top:30px;">Contáctanos</h2>
+    <div class="whatsapp">
+      <a href="https://wa.me/549XXXXXXXXXX" target="_blank">💬 Contactar por WhatsApp</a>
     </div>
+  </section>
 
-    <!-- Producto 3 -->
-    <div class="producto">
-      <img src="imagen3.jpg" alt="Producto 3">
-      <div class="titulo">Producto 3</div>
-      <div class="precio">$100</div>
-      <a href="#" class="btn">Añadir al carrito</a>
-    </div>
-
-    <!-- Producto 4 -->
-    <div class="producto">
-      <img src="imagen4.jpg" alt="Producto 4">
-      <div class="titulo">Producto 4</div>
-      <div class="precio">$350</div>
-      <a href="#" class="btn">Añadir al carrito</a>
-    </div>
-
-    <!-- Producto 5 -->
-    <div class="producto">
-      <img src="imagen5.jpg" alt="Producto 5">
-      <div class="titulo">Producto 5</div>
-      <div class="precio">$800</div>
-      <a href="#" class="btn">Añadir al carrito</a>
-    </div>
-  </div>
-
-  <!-- Botón de WhatsApp -->
-  <div class="whatsapp">
-    <a href="https://wa.me/549XXXXXXXXXX" target="_blank">💬 Contactar por WhatsApp</a>
-  </div>
+  <!-- Footer -->
+  <footer>
+    © 2025 Mi Tienda - Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
